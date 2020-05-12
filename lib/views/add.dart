@@ -99,7 +99,7 @@ class _MyBodyState extends State<MyBody> {
               }
               else{
                 setState(() {
-                  _x = num1 + num2;
+                  _x = num1 / num2;
                 });
               }
             },
