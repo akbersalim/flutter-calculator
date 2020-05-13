@@ -54,8 +54,13 @@ class _MyBodyState extends State<MyBody> {
             controller: n1,
             textAlign: TextAlign.center,
             decoration: InputDecoration(
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.greenAccent),
+              ),
               hintText: "Number 1",
-              border: OutlineInputBorder(),
+              labelText: "Enter a number",
+              border:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
             ),
           ),
           Container(
@@ -73,7 +78,13 @@ class _MyBodyState extends State<MyBody> {
             controller: n2,
             textAlign: TextAlign.center,
             decoration: InputDecoration(
-                hintText: "Number 2", border: OutlineInputBorder()),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.greenAccent),
+                ),
+                labelText: "Enter a number",
+                hintText: "Number 2",
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0))),
           ),
           SizedBox(
             height: 20.0,
@@ -82,22 +93,19 @@ class _MyBodyState extends State<MyBody> {
             onTap: () {
               var num1 = double.parse(n1.text);
               var num2 = double.parse(n2.text);
-              if (choice == 1){
+              if (choice == 1) {
                 setState(() {
                   _x = num1 + num2;
                 });
-              }
-              else if (choice == 2){
+              } else if (choice == 2) {
                 setState(() {
                   _x = num1 - num2;
                 });
-              }
-              else if (choice == 3){
+              } else if (choice == 3) {
                 setState(() {
                   _x = num1 * num2;
                 });
-              }
-              else{
+              } else {
                 setState(() {
                   _x = num1 / num2;
                 });

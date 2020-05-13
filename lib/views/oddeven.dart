@@ -6,7 +6,7 @@ class OddEven extends StatefulWidget {
 }
 
 class _OddEvenState extends State<OddEven> {
-  var _r="Even";
+  var _r="?";
   TextEditingController n = TextEditingController();
 
   @override
@@ -23,10 +23,15 @@ class _OddEvenState extends State<OddEven> {
               TextField(
                 controller: n,
                 decoration: InputDecoration(
-                    hintText: "Enter a number", border: OutlineInputBorder()),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red,width: 2.0),
+                    ),
+                  labelText: "Enter a number",
+                    labelStyle: TextStyle(color: Colors.black,fontSize: 20.0),
+                    hintText: "Enter a number", border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0))),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 20.0),
+              SizedBox(height: 10.0),
               GestureDetector(
                 onTap: () {
                   var a = int.parse(n.text);
@@ -55,7 +60,7 @@ class _OddEvenState extends State<OddEven> {
                   )),
                 ),
               ),
-              SizedBox(height: 20.0),
+              SizedBox(height: 30.0),
               Text(
                 _r.toString(),
                 style: TextStyle(fontSize: 30.0),
