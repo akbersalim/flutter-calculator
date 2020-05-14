@@ -89,7 +89,7 @@ class _MyBodyState extends State<MyBody> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Scroll down"),
+              Text("Scroll down",style: TextStyle(color: Colors.blue),),
               SizedBox(
                 height: 10.0,
               ),
