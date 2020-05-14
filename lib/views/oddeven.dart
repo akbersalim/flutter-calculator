@@ -52,7 +52,9 @@ class _OddEvenState extends State<OddEven> {
                   height: 50.0,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                      color: Colors.black,
+                      gradient: LinearGradient(
+                        colors: [Colors.red,Colors.purple]
+                      ),
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Center(
                       child: Text(
