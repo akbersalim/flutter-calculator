@@ -7,7 +7,19 @@ class Calculate extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(backgroundColor: Colors.white, body: MyBody()),
+      home: Scaffold(
+          backgroundColor: Colors.white,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SingleChildScrollView(
+                child: Container(
+                    height: MediaQuery.of(context).size.height-630,
+                    child: SingleChildScrollView(child: MyBody())),
+              )
+            ],
+          )),
     );
   }
 }

@@ -29,9 +29,11 @@ class TabViewState extends State<TabView> with SingleTickerProviderStateMixin {
           centerTitle: true,
           title: Text("Calculator App"),
         ),
-        body: TabBarView(
-          children: <Widget>[Calculate(), OddEven()],
-          controller: t,
+        body: Container(
+          child: TabBarView(
+            children: <Widget>[Calculate(), OddEven()],
+            controller: t,
+          ),
         ),
         bottomNavigationBar: Material(
           color: Colors.blue,
