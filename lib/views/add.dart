@@ -17,7 +17,7 @@ class Calculate extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Container(
-                        height: MediaQuery.of(context).size.height - 627,
+                        height: MediaQuery.of(context).size.height - 637,
                         color: Colors.white,
                         margin: EdgeInsets.all(5.0),
                         child: SingleChildScrollView(child: MyBody())),
