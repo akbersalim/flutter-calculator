@@ -21,6 +21,7 @@ class _OddEvenState extends State<OddEven> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextField(
+                keyboardType: TextInputType.numberWithOptions(),
                 controller: n,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(

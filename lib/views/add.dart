@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttercalc/views/oddeven.dart';
@@ -221,32 +219,6 @@ class _MyBodyState extends State<MyBody> {
                 _x.toString(),
                 style: TextStyle(fontSize: 23.0, color: Colors.black),
                 textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => OddEven()));
-            },
-            excludeFromSemantics: true,
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  gradient: LinearGradient(
-                    colors: [Color(0xff159957), Color(0xff155799)],
-                  )),
-              height: 50.0,
-              width: double.infinity,
-              child: Center(
-                child: Text(
-                  "Odd or Even",
-                  style: TextStyle(fontSize: 23.0, color: Colors.white),
-                  textAlign: TextAlign.center,
-                ),
               ),
             ),
           ),
